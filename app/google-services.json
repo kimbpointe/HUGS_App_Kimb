@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580746948211",
+    "project_id": "hugs-3",
+    "storage_bucket": "hugs-3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580746948211:android:f61be5e7e36ae511164406",
+        "android_client_info": {
+          "package_name": "com.example.hugsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580746948211-fk1mk6t6jv8osul9fsl4o615nbinr3nl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChIdfntVByhnynQQb93E-jrl_UVrVhWs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580746948211-fk1mk6t6jv8osul9fsl4o615nbinr3nl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
