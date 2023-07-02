@@ -71,7 +71,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingMultiplier="1.2"
-                android:text="This application collects, stores, and forwards infant grasp force data for analysis. A companion app may also be used to capture video data for movement analysis"
+                android:text="This application collects, stores, and forwards infant grasp force data for analysis. You will also be able to use this app to record video data for movement analysis."
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp"

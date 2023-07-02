@@ -71,7 +71,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingMultiplier="1.2"
-                android:text="1. Power on baby toy with grasp sensors\n2. Connect to toy via bluethooth\n3. Begin monitoring and collecting force data"
+                android:text="1. Power on baby toy with grasp sensors\n2. Connect to toy via Bluetooth\n3. Begin monitoring and collecting force and video data"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="18sp"
