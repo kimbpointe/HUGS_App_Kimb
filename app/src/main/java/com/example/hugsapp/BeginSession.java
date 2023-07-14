@@ -23,8 +23,8 @@ import java.util.List;
 
 public class BeginSession extends AppCompatActivity {
 
-    int handChoice = -1; //right = 0, left = 1
-    ImageView left, right, back;
+    int dataChoice = -1; //right = 0, left = 1
+    ImageView video, force, back;
     Button start;
     int duration;
     RemoteConfiguration config;
@@ -54,8 +54,8 @@ public class BeginSession extends AppCompatActivity {
             MainActivity.mBluetoothLeService.readCharacteristic(MainActivity.mNotifyCharacteristic);
         } catch (Exception e) {}
 
-        left = findViewById(R.id.leftHand);
-        right = findViewById(R.id.rightHand);
+        video = findViewById(R.id.camera);
+        force = findViewById(R.id.hand);
         start = findViewById(R.id.startSession);
         back = findViewById(R.id.back2);
         loading = findViewById(R.id.loadingAnimate);
@@ -65,19 +65,19 @@ public class BeginSession extends AppCompatActivity {
         loading.setVisibility(View.VISIBLE);
         loadingText.setVisibility(View.VISIBLE);
 
-        left.setOnClickListener(new View.OnClickListener() {
+        video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                handChoice = 1;
-                setHand(handChoice);
+                dataChoice = 1;
+                setData(dataChoice);
             }
         });
 
-        right.setOnClickListener(new View.OnClickListener() {
+        force.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                handChoice = 0;
-                setHand(handChoice);
+                dataChoice = 0;
+                setData(dataChoice);
             }
         });
 
@@ -92,12 +92,15 @@ public class BeginSession extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (handChoice == -1) {
+                if (dataChoice == -1) {
                     Toast.makeText(getApplicationContext(), "Select Hand", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (dataChoice == 1) {
+                    startActivity(new Intent(getApplicationContext(), VideoService.class));
+                }
+                else {
                     // next screen
                     Intent start = new Intent(getApplicationContext(), Session.class);
-                    start.putExtra("hand", handChoice);
+                    start.putExtra("data type", dataChoice);
                     start.putExtra("duration", duration);
 
                     startActivity(start);
@@ -192,13 +195,13 @@ public class BeginSession extends AppCompatActivity {
 
 
 
-    public void setHand(int handSelection) {
-        if (handSelection == 1) {
-            left.setBackground(getApplicationContext().getDrawable(R.drawable.select_circle));
-            right.setBackground(getApplicationContext().getDrawable(R.drawable.clear));
-        } else if (handSelection == 0) {
-            left.setBackground(getApplicationContext().getDrawable(R.drawable.clear));
-            right.setBackground(getApplicationContext().getDrawable(R.drawable.select_circle));
+    public void setData(int dataSelection) {
+        if (dataSelection == 1) {
+            video.setBackground(getApplicationContext().getDrawable(R.drawable.select_circle));
+            force.setBackground(getApplicationContext().getDrawable(R.drawable.clear));
+        } else if (dataSelection == 0) {
+            video.setBackground(getApplicationContext().getDrawable(R.drawable.clear));
+            force.setBackground(getApplicationContext().getDrawable(R.drawable.select_circle));
         }
     }
 //    @Override
