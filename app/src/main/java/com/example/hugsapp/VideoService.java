@@ -25,7 +25,7 @@ public class VideoService extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_video_service);
 
         if (isCameraPresentInPhone()) {
             Log.i("VIDEO_RECORD_TAG", "Camera is detected");

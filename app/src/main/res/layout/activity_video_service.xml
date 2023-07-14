@@ -7,14 +7,28 @@
     android:background="@color/main_blue"
     tools:context=".VideoService">
 
+    <ImageView
+        android:id="@+id/back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:padding="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
     <Button
         android:id="@+id/recordingButton"
-        android:layout_width="269dp"
-        android:layout_height="130dp"
+        android:layout_width="207dp"
+        android:layout_height="99dp"
+        android:background="@drawable/next_button"
         android:onClick="recordVideoButtonPressed"
         android:text="Start Recording"
-        android:textSize="25sp"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

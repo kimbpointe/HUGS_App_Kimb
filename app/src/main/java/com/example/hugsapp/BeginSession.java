@@ -92,10 +92,11 @@ public class BeginSession extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (dataChoice == -1) {
-                    Toast.makeText(getApplicationContext(), "Select Hand", Toast.LENGTH_SHORT).show();
-                } else if (dataChoice == 1) {
-                    startActivity(new Intent(getApplicationContext(), VideoService.class));
+                if (dataChoice == 1) {
+                    Intent video = new Intent(getApplicationContext(), VideoService.class);
+                    startActivity(video);
+                } else if (dataChoice == -1) {
+                    Toast.makeText(getApplicationContext(), "Select Data", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     // next screen
