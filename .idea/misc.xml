@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable-anydpi/ic_video.xml" value="0.1535" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/camera.xml" value="0.1535" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/ic_hand.xml" value="0.1535" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/video_camera.xml" value="0.1535" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/activity_beign_session.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/activity_onboarding.xml" value="0.25" />

@@ -41,15 +41,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:text="Camera"
+        android:text="Video Data"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/leftHand"
+        app:layout_constraintEnd_toEndOf="@+id/camera"
 
         app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="@+id/leftHand"
-        app:layout_constraintTop_toBottomOf="@+id/leftHand" />
+        app:layout_constraintStart_toStartOf="@+id/camera"
+        app:layout_constraintTop_toBottomOf="@+id/camera" />
 
     <TextView
         android:id="@+id/textView6"
@@ -57,22 +57,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        android:text="Force"
+        android:text="Force Data"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
 
-        app:layout_constraintEnd_toEndOf="@+id/rightHand"
+        app:layout_constraintEnd_toEndOf="@+id/hand"
         app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="@+id/rightHand"
-        app:layout_constraintTop_toBottomOf="@+id/rightHand" />
+        app:layout_constraintStart_toStartOf="@+id/hand"
+        app:layout_constraintTop_toBottomOf="@+id/hand" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Choose your data"
+        android:text="Choose your method of data collection"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,19 +92,19 @@
         app:layout_constraintTop_toBottomOf="@+id/loadingAnimate" />
 
     <ImageView
-        android:id="@+id/leftHand"
+        android:id="@+id/camera"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="40dp"
-        android:padding="25dp"
-        android:scaleX="-1"
-        android:src="@drawable/ic_hand"
+        android:padding="10dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/video_camera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
-        android:id="@+id/rightHand"
+        android:id="@+id/hand"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="40dp"
