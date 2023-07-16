@@ -1,6 +1,5 @@
 package com.example.hugsapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.bluetooth.BluetoothGattCharacteristic;
@@ -24,6 +23,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.hugsapp.models.RemoteConfiguration;
 
 import java.text.SimpleDateFormat;
@@ -35,10 +35,11 @@ import java.util.concurrent.TimeUnit;
 public class Session extends AppCompatActivity {
 
     ImageView clock, status;
+    LottieAnimationView data;
     TextView timer;
     Button abort;
     long timerDuration;
-    int handChoice = -1;
+    int dataChoice = -1;
     int duration;
     RemoteConfiguration config;
 
@@ -60,6 +61,7 @@ public class Session extends AppCompatActivity {
         status = findViewById(R.id.statusDot);
         timer = findViewById(R.id.timerText);
         abort = findViewById(R.id.abortSession);
+        data = findViewById(R.id.dataTransferAnimation);
 
         registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
         if (MainActivity.mBluetoothLeService != null) {
@@ -69,14 +71,14 @@ public class Session extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if(extras == null) {
-            handChoice = 0;
+            dataChoice = 0;
             duration = config.getSessionDuration();
             //Set Header
             results = "Date & Time: " + getTime() + "\nHand: Right\nSession Duration: " + duration + " seconds\n\nData:\n";
         } else {
-            handChoice = extras.getInt("hand");
+            dataChoice = extras.getInt("hand");
             duration = extras.getInt("duration");
-            if (handChoice == 0){
+            if (dataChoice == 0){
                 results = "Date & Time: " + getTime() + "\nHand: Right\nSession Duration: " + duration + " seconds\n\nData:\n";
             }
             else{
@@ -94,7 +96,6 @@ public class Session extends AppCompatActivity {
                         TimeUnit.MILLISECONDS.toMinutes(l),
                         TimeUnit.MILLISECONDS.toSeconds(l) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(l)));
                 timer.setText(sDuration);
-
             }
 
             @Override
@@ -108,7 +109,7 @@ public class Session extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent validate = new Intent(getApplicationContext(), Validation.class);
-                        validate.putExtra("hand", handChoice);
+                        validate.putExtra("hand", dataChoice);
                         validate.putExtra("duration", duration);
                         validate.putExtra("results", results);
                         mp.stop();

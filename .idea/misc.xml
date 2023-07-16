@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable-anydpi/ic_video.xml" value="0.1535" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.145" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable-v24/pill_button.xml" value="0.145" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/camera.xml" value="0.1535" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/ic_hand.xml" value="0.1535" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/ic_launcher_background.xml" value="0.145" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/drawable/video_camera.xml" value="0.1535" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/activity_beign_session.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
@@ -25,6 +27,8 @@
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/onboard_three_fragment.xml" value="0.25" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/onboard_two_fragment.xml" value="0.25" />
         <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/layout/session_complete.xml" value="0.25" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.145" />
+        <entry key="..\:/Users/kimbe/AndroidStudioProjects/HUGS-App-main/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.145" />
       </map>
     </option>
   </component>
