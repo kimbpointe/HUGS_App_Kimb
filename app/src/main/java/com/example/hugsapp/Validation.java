@@ -3,9 +3,7 @@ package com.example.hugsapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import android.animation.Animator;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -36,7 +34,7 @@ public class Validation extends AppCompatActivity {
     Button continueButton, cancel, addTime, minusTime;
     TextView leftText, rightText;
     LottieAnimationView check;
-    int handChoice = -1;
+    int dataChoice = -1;
     int duration, durationStage = 0;
     RemoteConfiguration config;
 
@@ -68,11 +66,11 @@ public class Validation extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if(extras == null) {
-            handChoice = 0;
+            dataChoice = 0;
             duration = config.getSessionDuration();
             results = "";
         } else {
-            handChoice = extras.getInt("hand");
+            dataChoice = extras.getInt("data");
             duration = extras.getInt("duration");
             results = extras.getString("results");
         }

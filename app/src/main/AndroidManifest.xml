@@ -33,6 +33,14 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".videoValidation"
+            android:exported="false"
+            android:theme="@style/Theme.HUGSApp.Onboarding">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Session"
             android:exported="false"
             android:theme="@style/Theme.HUGSApp.Onboarding">

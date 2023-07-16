@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +24,13 @@ public class VideoService extends AppCompatActivity {
 
     private Uri videoPath;
 
+    Button cancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_service);
+        cancel = findViewById(R.id.cancel);
 
         if (isCameraPresentInPhone()) {
             Log.i("VIDEO_RECORD_TAG", "Camera is detected");
@@ -33,6 +38,14 @@ public class VideoService extends AppCompatActivity {
         } else {
             Log.i("VIDEO_RECORD_TAG", "ERROR: No camera is detected");
         }
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), BeginSession.class));
+                finish();
+            }
+        });
     }
 
 
@@ -57,7 +70,6 @@ public class VideoService extends AppCompatActivity {
     private void recordVideo() {
         android.content.Intent intent = new android.content.Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         startActivityForResult(intent, VIDEO_RECORD_CODE);
-
     }
 
     @Override
@@ -68,6 +80,8 @@ public class VideoService extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 videoPath = data.getData();
                 Log.i("VIDEO_RECORD_TAG", "Video is recording and available at path " + videoPath);
+                Intent save = new Intent(getApplicationContext(), videoValidation.class);
+                startActivity(save);
             }
             else if(resultCode == RESULT_CANCELED) {
                 Log.i("VIDEO_RECORD_TAG", "Recorded video is canceled");
